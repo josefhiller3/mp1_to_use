@@ -1,1 +1,71 @@
 /* Your SCSS here. */
+.main_header {
+    background-color: #660000;
+    // padding: 0.75rem 1rem;
+    text-align: left;
+    color: white;
+
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: bold;
+    
+    // position: sticky;
+    // top: 0;
+    // width: 100%;
+    // z-index: 1000;
+
+    box-sizing: border-box;
+   
+}
+
+#scroll_indicator_item {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #660000;
+    color: white;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    
+    
+    
+}
+
+.footer {
+    background-color: #660000;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+main {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+#scroll_indicator_item a {
+    color: white;
+    text-decoration: none;
+    min-width: 0;
+    
+    
+}
+
+paragraph {
+    color: white;
+}
