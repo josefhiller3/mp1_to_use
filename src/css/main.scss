@@ -19,6 +19,33 @@
    
 }
 
+.About {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.Legends {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+
+}
+#guitar {
+    flex: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: auto;
+    min-height: 0;
+    
+}
+
+.Home {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
 #scroll_indicator_item {
     display: flex;
     justify-content: flex-end;
@@ -44,6 +71,8 @@
     color: white;
     padding: 1rem;
     width: 100%;
+    margin-top: auto;
+    
 }
 
 
@@ -51,11 +80,75 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: black;
+    
+    display: flex;
+    flex-direction: column;
+    height:100%;
 }
 
-main {
-    min-height: 100vh;
-    padding: 2rem;
+.Carousel {
+    overflow: hidden;
+    width: 80vw;
+    max-width: 600px;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    margin: 2rem auto;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.Carousel-item {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+// .Carousel img {
+//     width: 100%;
+//     height: 100%;
+//     flex-shrink: 0;
+//     object-fit: cover;
+// }
+
+.Carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.Carousel-button-prev, 
+.Carousel-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    // background-color: rgba(0, 0, 0, 0.5);
+    // color: white;
+    background-color: black;
+    color:#660000;
+    border: none;
+    padding: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+
+.Carousel-button-prev {
+  left: 10px;
+}
+
+.Carousel-button-next {
+  right: 10px;
+}
+.Carousel-button-prev:hover, 
+.Carousel-button-next:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #scroll_indicator_item a {

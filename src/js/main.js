@@ -23,3 +23,42 @@ window.addEventListener('scroll', () => {
     
   
 });
+
+
+const track = document.querySelector('.Carousel-item');
+const slides = document.querySelectorAll('.Carousel-item img');
+const carousel = document.querySelector('.Carousel');
+
+const prevButton = document.querySelector('.Carousel-button-prev');
+const nextButton = document.querySelector('.Carousel-button-next');
+let currentIndex = 0;
+function updateCarousel() {
+    const imageWidth = carousel.clientWidth;
+    const offset = -currentIndex*imageWidth;
+    track.style.transform = `translateX(${offset}px)`;
+
+}
+
+function slideNext() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+}
+
+function slidePrev() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+}
+
+
+
+prevButton.addEventListener('click', e => {
+    e.stopPropagation();
+    slidePrev();
+});
+
+nextButton.addEventListener('click', e => {
+    e.stopPropagation();
+    slideNext();
+});
+
+window.addEventListener('resize', updateCarousel);
