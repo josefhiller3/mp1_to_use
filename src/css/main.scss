@@ -173,3 +173,52 @@ paragraph {
 
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: black;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.open-modal {
+    background-color: #660000;
+    color:white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.open-modal:hover {
+    background-color: #880000;
+    color: white;
+}
