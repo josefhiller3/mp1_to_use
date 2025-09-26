@@ -89,3 +89,24 @@ window.addEventListener('click', (e) => {
         }
     });
 });
+
+
+const sections = document.querySelectorAll('main > div');
+const navLinks = document.querySelectorAll('#scroll_indicator_item a');
+
+window.addEventListener('scroll', () => {
+    let current = "";
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }    
+    })
+});
