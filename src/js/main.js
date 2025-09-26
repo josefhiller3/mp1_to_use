@@ -62,3 +62,30 @@ nextButton.addEventListener('click', e => {
 });
 
 window.addEventListener('resize', updateCarousel);
+
+
+const openButtons = document.querySelectorAll('.open-modal');
+const modals = document.querySelectorAll('.modal');
+const closes = document.querySelectorAll('.close');
+
+openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+
+    });
+});
+
+closes.forEach(close => {
+    close.addEventListener('click', () => {
+        close.parentElement.parentElement.style.display = 'none';
+    })
+})
+
+window.addEventListener('click', (e) => {
+    modals.forEach(modal => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
