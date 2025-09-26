@@ -222,3 +222,19 @@ paragraph {
     background-color: #880000;
     color: white;
 }
+
+#scroll_indicator_item a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    // transition: background 0.3s;
+    position: relative;
+}
+
+#scroll_indicator_item a.active { 
+    // background-color: white;
+    // edit the following two lines
+    color: yellow;
+    font-weight: bold;
+    // border-radius: 0.25rem;
+}
